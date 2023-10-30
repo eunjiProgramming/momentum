@@ -10,7 +10,8 @@ function onGeoOk(position) {
     .then((response) => response.json())
     .then((data) => {
       city.innerText = data.name;
-      weather.innerText = `${data.weather[0].main} / ${data.main.temp}`;
+      const iconUrl = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+      weather.innerHTML = `<img src="${iconUrl}" alt="${data.weather[0].description}"> / ${data.main.temp}`;
     });
 }
 function onGeoError() {

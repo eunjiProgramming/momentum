@@ -1,3 +1,125 @@
 .hidden {
   display: none;
 }
+
+/* 배경부분 */
+body {
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* 시계 */
+#clock {
+  font-size: 5rem;
+  color: white;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: bold;
+}
+
+/* 인사말 */
+#greeting {
+  font-size: 2rem;
+  color: white;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* 이름 입력 및 Todo 입력 */
+/* 이름 입력 */
+#login-form {
+  position: absolute;
+  top: 50%; /* 이 값을 조절해 보세요 */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Todo 입력 */
+#todo-form {
+  position: absolute;
+  top: 60%; /* 이 값을 조절해 보세요 */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+input {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid white;
+  color: white;
+  outline: none;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* Todo 리스트 위치 */
+#todo-list {
+  position: absolute;
+  bottom: 10%; /* 하단에서 10%만큼 떨어져 있게 설정 */
+  left: 50%;
+  transform: translateX(-50%);
+  max-height: 25%; /* 목록의 최대 높이 제한 */
+  overflow-y: auto; /* 목록이 너무 길어지면 스크롤바 생성 */
+}
+
+/* Todo 리스트 아이템 디자인 */
+#todo-list li {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 5px 15px;
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#todo-list li span {
+  flex-grow: 1;
+  color: black;
+}
+
+#todo-list li button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* 인용구 */
+/* 인용구 */
+#quote {
+  position: absolute;
+  bottom: 5%; /* 하단에서 5%만큼 떨어져 있게 설정 */
+  left: 5%; /* 왼쪽에서 5%만큼 떨어져 있게 설정 */
+  color: white;
+  font-size: 1.2rem;
+}
+
+#quote span:first-child {
+  display: block; /* 인용구 내용을 새 줄에서 시작 */
+  margin-bottom: 0.5rem; /* 저자와의 간격 */
+}
+
+/* 날씨 */
+#weather {
+  position: absolute;
+  top: 10px; /* 상단 간격 */
+  right: 10px; /* 오른쪽 간격 */
+  color: white; /* 글씨 색상 */
+  font-size: 1.5rem; /* 글씨 크기. 필요에 따라 조절 가능 */
+}
+
+#weather img {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px; /* 아이콘과 텍스트 사이의 간격 */
+}

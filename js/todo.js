@@ -32,6 +32,13 @@ function paintToDo(newTodo) {
 
 function handleToDoSubmit(event) {
   event.preventDefault();
+
+  // 만약 현재 Todo 항목의 개수가 5개라면, 추가로 추가하지 않음.
+  if (toDos.length >= 5) {
+    alert('You can only have 5 To Dos!');
+    return;
+  }
+
   const newTodo = toDoInput.value;
   toDoInput.value = '';
   const newTodoObj = {
