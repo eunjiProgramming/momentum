@@ -59,3 +59,17 @@ if (savedToDos !== null) {
   toDos = parsedToDos;
   parsedToDos.forEach(paintToDo);
 }
+
+function loadToDos() {
+  const savedToDos = localStorage.getItem(TODOS_KEY);
+  if (savedToDos !== null) {
+    const parsedToDos = JSON.parse(savedToDos);
+    toDos = parsedToDos;
+    // 기존에 표시된 할 일 목록을 지우고 새로운 목록을 표시합니다.
+    toDoList.innerHTML = '';
+    parsedToDos.forEach(paintToDo);
+  }
+}
+
+// 페이지 로드 시 할 일 목록 불러오기
+loadToDos();
