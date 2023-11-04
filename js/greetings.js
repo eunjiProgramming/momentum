@@ -26,8 +26,14 @@ function paintGreetings(username) {
   const currentDate = new Date();
   const currentHour = currentDate.getHours();
   const greetingMessage = getGreetingMessage(currentHour);
+
+  // 인사말을 표시
   greeting.innerText = `${greetingMessage} ${username}`;
   greeting.classList.remove(HIDDEN_CLASSNAME);
+
+  // 사용자가 로그인한 후에만 할 일 폼과 목록을 표시
+  toDoForm.classList.remove(HIDDEN_CLASSNAME);
+  toDoList.classList.remove(HIDDEN_CLASSNAME);
 }
 
 const savedUsername = localStorage.getItem(USERNAME_KEY);
